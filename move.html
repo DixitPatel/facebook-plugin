@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Create Different Styles of Hover Effects with CSS3 Only</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>	
+	<link rel="stylesheet" href="style.css" />
+	<script type="text/javascript" src="http://www.queness.com/js/bsa2.js"></script>		
+	<style type="text/css">
+		
+		
+		.item {
+			text-align:center;
+			float:left;
+			margin:5px;
+			position:relative;			
+		}
+		
+			.item,
+			.item-hover,
+			.item-hover .mask,
+			.item-img,
+			.item-type-move .item-info {
+				width: 300px;
+				height: 225px;						
+			}
+
+			.item-hover,
+			.item-hover .mask,
+			.item-img { 
+				position:absolute;
+				top:0;
+				left:0;			
+			}			
+		
+			.item-type-move .item-hover {	
+				-webkit-transition: all 300ms ease-out;
+				-moz-transition: all 300ms ease-out;
+				-o-transition: all 300ms ease-out;
+				transition: all 300ms ease-out;	
+				opacity:0;
+				cursor:pointer;		
+				z-index:100;
+			}
+			
+				.item-type-move .item-info {
+					z-index:10;
+					color:#ffffff;
+					position:relative;
+					z-index:5;			
+					overflow:hidden;			
+				}
+			
+				.item-type-move .item-info .headline,
+				.item-type-move .item-info .date {
+					width: 100%;
+					position:absolute;
+					-webkit-transition: all 300ms ease-out;
+					-moz-transition: all 300ms ease-out;
+					-o-transition: all 300ms ease-out;
+					transition: all 300ms ease-out;		
+					-webkit-box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					-o-box-sizing: border-box;	
+					padding:0 10px;															
+				}				
+
+				.item-type-move .item-info .headline {
+					font-size:18px;			
+					top:10px;							
+				}
+				
+				.item-type-move .item-info .date {
+					font-size:14px;
+					font-style:italic;
+					bottom:10px;																		
+				}
+								
+				.item-type-move .item-info .line {
+					 height:1px;
+					 width:85%;
+					 margin:10px auto 0 auto;
+					 background-color:#ffffff;		 
+				}				
+				
+				.item-type-move .item-hover .mask {
+					background-color:#000;
+					opacity:0.5;
+					-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+					filter: alpha(opacity=50);					
+					z-index:0;
+				}
+				
+				.item-type-move .item-hover:hover {
+					opacity:1;
+				}				
+
+				.item-type-move .item-hover:hover .item-info .headline {
+					top:35%;
+				}				
+
+				.item-type-move .item-hover:hover .item-info .date {
+					bottom:35%;
+				}
+				
+
+				
+			.item-img {			
+				background-color:#7a548f;
+				z-index:0;			
+			}
+		
+
+		
+	</style>
+	
+	<!--[if lte IE 8]>
+	<style type="text/css">
+
+		.item-type-move .item-info {
+			top:25%;
+			display:none;
+		}
+
+		.item-type-move .mask {
+			display:none;
+		}
+
+		.item-type-move .item-info .headline,
+		.item-type-move .item-info .date {		
+			position:static;
+			padding:0;
+			width: 90%;
+			margin:0 auto;
+		}
+
+		.item-type-move .item-info .headline {
+		}
+		
+		.item-type-move .item-info .date {
+			margin-top:30px;																		
+		}		
+		
+		.item-type-move .item-hover:hover .item-info,
+		.item-type-move .item-hover:hover .mask		 {
+			display:block;
+		}				
+
+
+
+	
+	</style>
+	<![endif]-->		
+	
+</head>
+<body>
+	
+<div class="container">
+	
+	<div id="info">
+	<div class="info-wrapper">
+		<a href="http://www.queness.com/post/16216/create-different-styles-of-hover-effects-with-css3-only"><b>Create Different Styles of Hover Effects with CSS3 Only</b></a>
+		<p>This CSS3 tutorial will show you how to make simple and elegant hover effect for thumbnail image. Basically, it will show extra bit of information when you hover over the images. <a href="http://www.queness.com/post/16216/create-different-styles-of-hover-effects-with-css3-only">Read Tutorial</a></p>
+	</div>	
+	</div>	
+	
+	<ul id="nav">
+		<li><a href="index.html">Single Line</a></li>
+		<li><a href="double.html">Double Lines</a></li>
+		<li class="current"><a href="move.html">Top & Bottom</a></li>
+		<li><a href="zoom.html">Zoom</a></li>
+		<li><a href="spin.html">Spin</a></li>								
+	</ul>	
+	
+	<div class="item item-type-move">
+		<a class="item-hover" href="http://dribbble.com/shots/1313878-Hand-Lettering-Process" target="_blank">
+			<div class="item-info">
+				<div class="headline">
+					Hand Lettering Process
+					<div class="line"></div>
+				</div>
+				<div class="date">February 29, 2014</div>							
+			</div>
+			<div class="mask"></div>
+		</a>
+		<div class="item-img"><img src="images/1.jpg" alt="" /></div>
+	</div>	
+	
+	<div class="item item-type-move">
+		<a class="item-hover" href="http://dribbble.com/shots/710530-Living-Stream" target="_blank">
+			<div class="item-info">
+				<div class="headline">
+					Hand Lettering Process
+					<div class="line"></div>
+				</div>
+				<div class="date">February 29, 2014</div>							
+			</div>
+			<div class="mask"></div>
+		</a>
+		<div class="item-img"><img src="images/2.jpg" alt="" /></div>
+	</div>	
+	
+	<div class="item item-type-move">
+		<a class="item-hover" href="http://dribbble.com/shots/567217-TwoSolid" target="_blank">
+			<div class="item-info">
+				<div class="headline">
+					Living Stream
+					<div class="line"></div>
+				</div>
+				<div class="date">February 29, 2014</div>							
+			</div>
+			<div class="mask"></div>
+		</a>
+		<div class="item-img"><img src="images/3.jpg" alt="" /></div>
+	</div>	
+	
+	<div class="item item-type-move">
+		<a class="item-hover" href="http://dribbble.com/shots/511831-zeal-tea" target="_blank">
+			<div class="item-info">
+				<div class="headline">
+					Two Solid Studio
+					<div class="line"></div>
+				</div>
+				<div class="date">February 29, 2014</div>							
+			</div>
+			<div class="mask"></div>
+		</a>
+		<div class="item-img"><img src="images/4.jpg" alt="" /></div>
+	</div>	
+	
+	<div class="item item-type-move">
+		<a class="item-hover" href="http://dribbble.com/shots/961627-Austin" target="_blank">
+			<div class="item-info">
+				<div class="headline">
+					Texas Austin
+					<div class="line"></div>
+				</div>
+				<div class="date">February 29, 2014</div>							
+			</div>
+			<div class="mask"></div>
+		</a>
+		<div class="item-img"><img src="images/5.jpg" alt="" /></div>
+	</div>	
+	
+	<div class="item item-type-move">
+		<a class="item-hover" href="http://dribbble.com/shots/1435298-Jivoy-Live" target="_blank">
+			<div class="item-info">
+				<div class="headline">
+					Jivoy
+					<div class="line"></div>
+				</div>
+				<div class="date">February 29, 2014</div>							
+			</div>
+			<div class="mask"></div>
+		</a>
+		<div class="item-img"><img src="images/6.jpg" alt="" /></div>
+	</div>	
+	
+		
+	
+</div>
+	
+</body>
+</html>
