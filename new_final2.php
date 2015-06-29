@@ -35,8 +35,8 @@ use Facebook\GraphSessionInfo;
 use Facebook\GraphLocation;	
  include('My_Sql Connection.php');		
  
-$app_id = '635303243252854';
-$app_secret = '0f56cd57656e5bf6784009d1231dced3';
+$app_id = '**';
+$app_secret = '**';
 $app_redirect = 'http://localhost/check.php';
 
  

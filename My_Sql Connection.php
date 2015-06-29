@@ -1,6 +1,6 @@
 <?php 
 $user_name = "root";
-$password = "nitin";
+$password = "dixit";
 $database = "new service development project";
 $server = "localhost";
 

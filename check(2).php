@@ -94,8 +94,8 @@ ob_start();
 	 session_destroy();
 	 //$session->setSession(null);
 }*/
-$app_id = '635303243252854';
-$app_secret = '0f56cd57656e5bf6784009d1231dced3';
+$app_id = '**';
+$app_secret = '**';
 $app_redirect = 'http://localhost/Final/check.php';
 
  
